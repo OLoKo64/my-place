@@ -15,15 +15,7 @@
     >
     </block>
 
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener"
-        >Gridsome Docs</a
-      >
-      <span>|</span>
-      <a href="https://github.com/OLoKo64" target="_blank" rel="noopener"
-        >My GitHub</a
-      >
-    </p>
+    <footer-links :links="footerLinks" />
   </Layout>
 </template>
 
@@ -31,21 +23,32 @@
 import Block from "~/components/Block.vue";
 import ProfileHeader from "~/components/ProfileHeader.vue";
 import TechStack from "~/components/TechStack.vue";
+import FooterLinks from "~/components/FooterLinks.vue";
 export default {
   components: {
     Block,
     ProfileHeader,
     TechStack,
+    FooterLinks,
   },
   metaInfo: {
     title: "Home",
   },
+  data() {
+    return {
+      footerLinks: [
+        {
+          name: "Gridsome Docs",
+          link: "https://gridsome.org/docs/",
+        },
+        {
+          name: "My GitHub",
+          link: "https://github.com/OLoKo64",
+        },
+      ],
+    };
+  },
 };
 </script>
 
-<style>
-.home-links a {
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
-</style>
+<style></style>
