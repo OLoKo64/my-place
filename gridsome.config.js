@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'OLoKo64-Dev',
+  siteDescription: 'Place where I write about code',
   plugins: []
 }

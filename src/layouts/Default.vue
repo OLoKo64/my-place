@@ -2,32 +2,47 @@
   <div class="layout">
     <header class="header">
       <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+        <g-link class="my-name" to="/">{{ name }}</g-link>
       </strong>
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about/">About</g-link>
-        <g-link class="nav__link" to="/test/">Test</g-link>
       </nav>
     </header>
     <slot/>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
+<script>
+export default {
+  data() {
+    return {
+      name: 'Reinaldo Rozato Junior'
+    }
+  },
 }
-</static-query>
+</script>
+
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: 'DM Mono', Arial, sans-serif;
+  color: rgb(200, 200, 200);
   margin:0;
   padding:0;
   line-height: 1.5;
+  background-color: #181a1b;
+}
+
+a {
+  color: rgb(0, 177, 136);
+  text-decoration: none;
+}
+
+.my-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .layout {
