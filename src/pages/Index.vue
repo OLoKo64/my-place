@@ -3,8 +3,8 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
     <profile-header />
-
-    <h1>My path</h1>
+    <tech-stack title="Stack" />
+    <h1>My Path</h1>
     <block
       datePublished="datePublished"
       title="title"
@@ -30,10 +30,12 @@
 <script>
 import Block from "~/components/Block.vue";
 import ProfileHeader from "~/components/ProfileHeader.vue";
+import TechStack from "~/components/TechStack.vue";
 export default {
   components: {
     Block,
     ProfileHeader,
+    TechStack,
   },
   metaInfo: {
     title: "Home",
@@ -42,10 +44,6 @@ export default {
 </script>
 
 <style>
-.profile-pic {
-  border-radius: 50%;
-}
-
 .home-links a {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
