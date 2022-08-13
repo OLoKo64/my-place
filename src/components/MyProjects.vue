@@ -64,7 +64,7 @@ export default {
 
 .projects__card:hover {
   transition: all 0.2s ease-in-out;
-  background-color: #2b483e;
+  background-color: rgb(0, 55, 42);
   border: 1px solid rgba(204, 204, 204, 0);
 }
 

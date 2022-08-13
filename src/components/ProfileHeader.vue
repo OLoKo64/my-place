@@ -30,13 +30,7 @@
 
 <script>
 export default {
-  name: "ProfileHeader",
-  computed: {
-    screenWidth() {
-      console.log(this.$store.state.screenWidth);
-      return this.$store.state.screenWidth;
-    },
-  },
+  name: "ProfileHeader"
 };
 </script>
 

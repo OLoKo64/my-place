@@ -4,7 +4,7 @@
       <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
       <profile-header />
-      <tech-stack title="Stack" />
+      <tech-stack title="Work Stack" />
       <my-projects :cards="myProjects" />
       <path-timeline />
 
