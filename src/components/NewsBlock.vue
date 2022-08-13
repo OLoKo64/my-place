@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "Block",
+  name: "NewsBlock",
   props: {
     datePublished: {
       type: String,
