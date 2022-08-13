@@ -4,29 +4,20 @@
 
     <profile-header />
     <tech-stack title="Stack" />
-    <h1>My Path</h1>
-    <block
-      datePublished="datePublished"
-      title="title"
-      content="content"
-      readTime="readTime"
-      readText="readText"
-      readLink="readLink"
-    >
-    </block>
+    <path-timeline />
 
     <footer-links :links="footerLinks" />
   </Layout>
 </template>
 
 <script>
-import Block from "~/components/Block.vue";
+import PathTimeline from "~/components/PathTimeline.vue";
 import ProfileHeader from "~/components/ProfileHeader.vue";
 import TechStack from "~/components/TechStack.vue";
 import FooterLinks from "~/components/FooterLinks.vue";
 export default {
   components: {
-    Block,
+    PathTimeline,
     ProfileHeader,
     TechStack,
     FooterLinks,

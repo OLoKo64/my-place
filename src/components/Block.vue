@@ -8,7 +8,6 @@
       <span class="block__read-time">{{ readTime }}</span>
       <a :href="readLink">{{ readLink }}</a>
     </div>
-    <hr />
   </div>
 </template>
 
