@@ -11,10 +11,12 @@
 </template>
 
 <script>
-import PathTimeline from "~/components/PathTimeline.vue";
-import ProfileHeader from "~/components/ProfileHeader.vue";
-import TechStack from "~/components/TechStack.vue";
-import FooterLinks from "~/components/FooterLinks.vue";
+import {
+  PathTimeline,
+  ProfileHeader,
+  TechStack,
+  FooterLinks,
+} from "~/components";
 export default {
   components: {
     PathTimeline,

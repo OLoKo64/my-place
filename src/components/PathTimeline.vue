@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import NewsBlock from "~/components/NewsBlock.vue";
+import { NewsBlock } from "~/components";
 export default {
   components: {
     NewsBlock,
