@@ -20,14 +20,14 @@ export default {
 
 <style>
 .flex-display-block {
-    display: flex;
-    justify-content: flex-start;
-    align-items: top;
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
 }
 
 .profile-pic {
-    margin-right: 20px;
+  margin-right: 20px;
   border-radius: 50%;
-
+  border: 2px solid #ffffff;
 }
 </style>

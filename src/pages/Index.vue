@@ -38,12 +38,16 @@ export default {
     return {
       footerLinks: [
         {
-          name: "Gridsome Docs",
-          link: "https://gridsome.org/docs/",
+          name: "Gridsome",
+          link: "https://gridsome.org/",
         },
         {
           name: "My GitHub",
           link: "https://github.com/OLoKo64",
+        },
+        {
+          name: "My Email",
+          link: "mailto:reinaldorozatoj@gmail.com",
         },
       ],
     };
