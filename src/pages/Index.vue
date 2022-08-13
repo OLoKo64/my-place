@@ -1,13 +1,16 @@
 <template>
-  <Layout>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+  <transition name="fade" appear>
+    <Layout>
+      <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
-    <profile-header />
-    <tech-stack title="Stack" />
-    <path-timeline />
+      <profile-header />
+      <tech-stack title="Stack" />
+      <my-projects :cards="myProjects" />
+      <path-timeline />
 
-    <footer-links :links="footerLinks" />
-  </Layout>
+      <footer-links :links="footerLinks" />
+    </Layout>
+  </transition>
 </template>
 
 <script>
@@ -16,11 +19,13 @@ import {
   ProfileHeader,
   TechStack,
   FooterLinks,
+  MyProjects,
 } from "~/components";
 export default {
   components: {
     PathTimeline,
     ProfileHeader,
+    MyProjects,
     TechStack,
     FooterLinks,
   },
@@ -43,9 +48,49 @@ export default {
           link: "mailto:reinaldorozatoj@gmail.com",
         },
       ],
+      myProjects: [
+        {
+          title: "TransferSh Helper Rusted",
+          content: "Store your transfer.sh links, so you can remember them later and know when they will expire, but now written in Rust.",
+          language: "Rust",
+          link: "https://github.com/OLoKo64/transfer-sh-helper-rusted"
+        },
+        {
+          title: "Regrep",
+          content: "Recreate grep in Rust, mostly for learning.",
+          language: "Rust",
+          link: "https://github.com/OLoKo64/regrep"
+        },
+        {
+          title: "Turing Machine",
+          content: "Recreation of the Turing Machine in PHP.",
+          language: "PHP",
+          link: "https://github.com/"
+        },
+        {
+          title: "Steam Prices Crawler",
+          content: "Crawler to get prices from Steam and output them to a csv file.",
+          language: "Python",
+          link: "https://github.com/OLoKo64/steam-game-prices"
+        },
+        {
+          title: "This Website",
+          content: "A simple static website built with Vue.js and Gridsome.",
+          language: "Vue",
+          link: "https://github.com/OLoKo64/my-place"
+        },
+      ],
     };
   },
 };
 </script>
 
-<style></style>
+<style>
+.fade-enter-active {
+  transition: opacity 1s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+</style>
