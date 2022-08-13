@@ -1,18 +1,20 @@
 <template>
   <div>
     <h1>My Projects</h1>
-    <div
-      v-on:click="clickCard(card.link)"
-      class="projects__card"
-      :key="card.title"
-      v-for="card in cards"
-    >
-      <div class="projects__interior-card">
-        <h4>{{ card.title }}</h4>
-        <p class="projects__card-content">
-          {{ cardContentMaxLength(card.content) }}
-        </p>
-        <p>{{ card.language }}</p>
+    <div class="project__all-cards">
+      <div
+        v-on:click="clickCard(card.link)"
+        class="projects__card"
+        :key="card.title"
+        v-for="card in cards"
+      >
+        <div class="projects__interior-card">
+          <h4>{{ card.title }}</h4>
+          <p class="projects__card-content">
+            {{ cardContentMaxLength(card.content) }}
+          </p>
+          <p>{{ card.language }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -44,6 +46,13 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 600px) {
+  .project__all-cards {
+    margin: auto;
+    width: 80%;
+  }
+}
+
 .projects__card {
   border: 1px solid #ccc;
   border-radius: 10px;
