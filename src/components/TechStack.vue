@@ -95,4 +95,8 @@ export default {
   margin-right: 15px;
   border-radius: 15%;
 }
+
+.stack-image:hover {
+  transform: scale(1.3);
+}
 </style>
