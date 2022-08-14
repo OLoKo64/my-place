@@ -14,7 +14,7 @@ async function fetchIndexFilesData() {
   }
 }
 
-async function fetchPathData() {
+async function fetchTimelineData() {
   try {
     const files = await fetchIndexFilesData();
     const fileData = await Promise.all(
@@ -40,4 +40,4 @@ async function fetchPathData() {
   }
 }
 
-export { fetchPathData };
+export { fetchTimelineData };

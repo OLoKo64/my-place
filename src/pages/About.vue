@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { fetchPathData } from "~/utils";
+import { fetchTimelineData } from "~/utils";
 import { PathTimeline } from "~/components";
 export default {
   components: {
@@ -20,12 +20,29 @@ export default {
   },
   data() {
     return {
-      timeline: () => [],
+      timeline: [
+        {
+          datePublished: "13/08/2022",
+          title: "Creating this website",
+          content:
+            "Here I tell why I created this website, the technologies I used and the things I want to improve.",
+          fullContent: [
+            "This is my second website, which I made using the tools I know about. The first one was made using React and was way more complex than it should be.",
+            "This one focus on the basic features first, using tools that are made for this type of content. Then I will add more features and improve them.",
+          ],
+          readTime: "1 min read",
+          readText: "Read More...",
+          readLink: "#",
+        },
+      ],
     };
   },
   methods: {
     async fetchData() {
-      this.timeline = await fetchPathData()
+      const timelineData = await fetchTimelineData();
+      if (timelineData.length > 0) {
+        this.timeline = timelineData;
+      }
     },
   },
   beforeMount() {

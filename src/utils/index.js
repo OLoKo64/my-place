@@ -1,3 +1,3 @@
-import { fetchPathData } from "./api";
+import { fetchTimelineData } from "./api";
 
-export { fetchPathData };
+export { fetchTimelineData };

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>My Path</h1>
+    <h1>Timeline</h1>
     <div :key="block.title" v-for="block in blocks">
       <news-block
         :datePublished="block.datePublished"
