@@ -1,0 +1,5 @@
+{
+  "contents": {
+    "my-path": ["test_two.json", "test_one.json"]
+  }
+}
