@@ -4,9 +4,13 @@
     <p>{{ datePublished }}</p>
     <h2>{{ title }}</h2>
     <p>{{ content }}</p>
+    <div v-if="show">
+      <p :key="paragraph" v-for="paragraph in fullContent">{{ paragraph }}</p>
+    </div>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
-      <a :href="readLink">{{ readText }}</a>
+      <a href="" @click="show = !show" v-if="!show">{{ readText }}</a>
+      <a href="" @click="show = !show" v-else>Hide</a>
     </div>
   </div>
 </template>
@@ -27,6 +31,10 @@ export default {
       type: String,
       default: "",
     },
+    fullContent: {
+      type: Array,
+      default: () => [],
+    },
     readTime: {
       type: String,
       default: "",
@@ -40,12 +48,17 @@ export default {
       default: "",
     },
   },
+  data() {
+    return {
+      show: false,
+    };
+  },
 };
 </script>
 
 <style>
 .block__time {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .block__read-time {

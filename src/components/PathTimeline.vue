@@ -6,6 +6,7 @@
         :datePublished="block.datePublished"
         :title="block.title"
         :content="block.content"
+        :fullContent="block.fullContent"
         :readTime="block.readTime"
         :readText="block.readText"
         :readLink="block.readLink"

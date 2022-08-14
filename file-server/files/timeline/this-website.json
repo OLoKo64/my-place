@@ -1,0 +1,12 @@
+{
+  "date-published": "13/08/2022",
+  "title": "Creating this website",
+  "content": "Here I tell why I created this website, the technologies I used and the things I want to improve.",
+  "full-content": [
+    "This is my second website, which I made using the tools I know about. The first one was made using React and was way more complex than it should be.",
+    "This one focus on the basic features first, using tools that are made for this type of content. Then I will add more features and improve them."
+  ],
+  "read-time": "2 min read",
+  "read-text": "Read More...",
+  "read-link": "#"
+}
