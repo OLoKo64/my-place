@@ -1,9 +1,12 @@
 <template>
   <div class="footer-links">
-    <span class="home-links" :key="link.name" v-for="link in links">
-      <span>|</span>
-      <a :href="link.link" target="_blank" rel="noopener">{{ link.name }}</a>
-    </span>
+    <hr />
+    <div class="footer-links">
+      <span class="home-links" :key="link.name" v-for="link in links">
+        <span>|</span>
+        <a :href="link.link" target="_blank" rel="noopener">{{ link.name }}</a>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -21,8 +24,8 @@ export default {
 
 <style>
 .footer-links {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .home-links a {

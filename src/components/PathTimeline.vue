@@ -27,16 +27,16 @@ export default {
     return {
       blocks: [
         {
-          datePublished: "datePublished",
-          title: "title",
-          content: "content",
-          readTime: "readTime",
-          readText: "readText",
-          readLink: "readLink",
+          datePublished: "13/08/2022",
+          title: "Creating this website",
+          content: "Here I tell why I created this website, the technologies I used and the things I want to improve.",
+          readTime: "2 min read",
+          readText: "Read More...",
+          readLink: "#",
         },
         {
           datePublished: "datePublished",
-          title: "title2",
+          title: "This is still under construction",
           content: "content",
           readTime: "readTime",
           readText: "readText",

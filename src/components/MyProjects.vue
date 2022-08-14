@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style>
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
   .project__all-cards {
     margin: auto;
     width: 80%;

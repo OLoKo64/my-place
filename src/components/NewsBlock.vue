@@ -6,7 +6,7 @@
     <p>{{ content }}</p>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
-      <a :href="readLink">{{ readLink }}</a>
+      <a :href="readLink">{{ readText }}</a>
     </div>
   </div>
 </template>
