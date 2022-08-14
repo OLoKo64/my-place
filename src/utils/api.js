@@ -3,7 +3,7 @@ import axios from "axios";
 async function fetchIndexFilesData() {
   try {
     const { data } = await axios.get(
-      `${process.env.GRIDSOME_FILE_SERVER_INDEX}`
+      `${process.env.GRIDSOME_BASE_HOST}/${process.env.GRIDSOME_FILE_SERVER_INDEX}`
     );
     if (!data) {
       return [];
@@ -19,7 +19,7 @@ async function fetchPathData() {
     const files = await fetchIndexFilesData();
     const fileData = await Promise.all(
       files["timeline"].map((file) =>
-        axios.get(`${process.env.GRIDSOME_FILE_SERVER_TIMELINE}${file}`)
+        axios.get(`${process.env.GRIDSOME_BASE_HOST}/${process.env.GRIDSOME_FILE_SERVER_TIMELINE}${file}`)
       )
     );
     return fileData
