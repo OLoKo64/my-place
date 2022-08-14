@@ -19,7 +19,7 @@ async function fetchPathData() {
     const files = await fetchIndexFilesData();
     const fileData = await Promise.all(
       files["timeline"].map((file) =>
-        axios.get(`${process.env.GRIDSOME_FILE_SERVER_MY_PATH}${file}`)
+        axios.get(`${process.env.GRIDSOME_FILE_SERVER_TIMELINE}${file}`)
       )
     );
     return fileData
