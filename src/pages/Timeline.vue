@@ -18,6 +18,9 @@ export default {
   components: {
     PathTimeline,
   },
+  metaInfo: {
+    title: "Timeline",
+  },
   data() {
     return {
       timeline: [
