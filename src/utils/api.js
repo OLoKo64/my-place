@@ -5,7 +5,6 @@ async function fetchTimelineData() {
     const { data } = await axios.get(
       `${process.env.GRIDSOME_TIMELINE_DATA_URL}`
     );
-    console.log(data);
     if (!data) {
       return [];
     }
