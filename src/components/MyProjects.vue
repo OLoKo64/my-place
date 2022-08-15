@@ -66,6 +66,7 @@ export default {
   transition: all 0.2s ease-in-out;
   background-color: rgb(0, 55, 42);
   border: 1px solid rgba(204, 204, 204, 0);
+  transform: scale(1.05);
 }
 
 .projects__interior-card {

@@ -20,7 +20,7 @@
           I'm currently learning and loving using it.
         </p>
         <p>
-          I have 2 yaers of work experience, mostly using Vue in the front end
+          I have 2 years of work experience, mostly using Vue in the front end
           and Python in the backend.
         </p>
       </div>
