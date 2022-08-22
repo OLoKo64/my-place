@@ -1,78 +1,14 @@
 <template>
-  <div class="tech-stack">
-    <h3 class="stack__title">{{ title }}</h3>
-    <div>
+  <div class="tech-stack component-spacing">
+    <h3 class="h3-custom stack__title">{{ title }}</h3>
+    <div class="indent-padding">
       <img
         class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/rust.png"
-        width="45"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/python.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/typescript.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/javascript.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/vuejs.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/linux.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/react.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/git.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/html5.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/nodejs.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/bootstrap.png"
-        width="25"
-      />
-      <img
-        class="stack-image"
-        alt="Rust"
-        src="../assets/img/tech_stack/sass.png"
-        width="25"
+        :alt="icon.alt"
+        :src="stackIconPath(icon.name)"
+        :width="icon.width"
+        :key="icon"
+        v-for="icon in stackIcons"
       />
     </div>
   </div>
@@ -87,16 +23,103 @@ export default {
       default: "My Stack",
     },
   },
+  setup() {
+    interface StackIcon {
+      name: string;
+      link: string;
+      alt: string;
+      width: string;
+    }
+    const stackIcons: StackIcon[] = [
+      {
+        name: "rust",
+        alt: "rust",
+        width: "45px",
+        link: "https://www.rust-lang.org/",
+      },
+      {
+        name: "python",
+        alt: "python",
+        width: "25px",
+        link: "https://www.python.org/",
+      },
+      {
+        name: "typescript",
+        alt: "typescript",
+        width: "25px",
+        link: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "javascript",
+        alt: "javascript",
+        width: "25px",
+        link: "https://www.javascript.com/",
+      },
+      {
+        name: "vuejs",
+        alt: "vuejs",
+        width: "25px",
+        link: "https://vuejs.org/",
+      },
+      {
+        name: "linux",
+        alt: "linux",
+        width: "25px",
+        link: "https://www.linux.org/",
+      },
+      {
+        name: "react",
+        alt: "react",
+        width: "25px",
+        link: "https://reactjs.org/",
+      },
+      {
+        name: "git",
+        alt: "git",
+        width: "25px",
+        link: "https://git-scm.com/",
+      },
+      {
+        name: "html5",
+        alt: "html5",
+        width: "25px",
+        link: "https://www.w3.org/TR/html5/",
+      },
+      {
+        name: "nodejs",
+        alt: "nodejs",
+        width: "25px",
+        link: "https://nodejs.org/",
+      },
+      {
+        name: "bootstrap",
+        alt: "bootstrap",
+        width: "25px",
+        link: "https://getbootstrap.com/",
+      },
+      {
+        name: "sass",
+        alt: "sass",
+        width: "25px",
+        link: "https://sass-lang.com/",
+      }
+    ]
+
+    // The "require" is needed to tell webpack to pack the icon
+    const stackIconPath = (name: string) =>
+      require(`../assets/img/tech_stack/${name}.png`);
+
+    return { stackIcons, stackIconPath }
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .tech-stack {
-  margin: 20px 0;
-
   .stack-image {
     margin-right: 15px;
     border-radius: 15%;
+    margin-bottom: 5px;;
   }
 
   .stack-image:hover {
@@ -104,8 +127,7 @@ export default {
   }
 
   .stack__title {
-    font-size: 1.3rem;
-    font-weight: bold;
+    margin-bottom: 20px;
   }
 }
 </style>

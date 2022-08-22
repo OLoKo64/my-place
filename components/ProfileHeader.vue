@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-header">
+  <div class="profile-header component-spacing">
     <div class="flex-display-block">
       <div class="profile-pic-block">
         <img
@@ -36,8 +36,10 @@ export default {
 
 <style scoped lang="scss">
 .profile-header {
-  margin: 20px 0;
-  
+  p {
+    margin-bottom: 10px;
+  }
+
   /* Smartphones (portrait) ----------- */
   @media only screen and (max-width: 600px) {
     .flex-display-block {
@@ -58,6 +60,7 @@ export default {
 
   .profile-pic {
     margin-right: 20px;
+    margin-bottom: 30px;
     border-radius: 50%;
     border: 2px solid #ffffff;
   }

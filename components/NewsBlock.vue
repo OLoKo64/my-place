@@ -2,7 +2,7 @@
   <div>
     <hr>
     <p>{{ datePublished }}</p>
-    <h2>{{ title }}</h2>
+    <h2 class="h2-custom">{{ title }}</h2>
     <p>{{ content }}</p>
     <div v-if="show">
       <p :key="paragraph" v-for="paragraph in fullContent">{{ paragraph }}</p>
@@ -16,6 +16,7 @@
 </template>
 
 <script lang="ts">
+import { ref } from "vue";
 export default {
   name: "NewsBlock",
   props: {
@@ -48,11 +49,11 @@ export default {
       default: "",
     },
   },
-  data() {
-    return {
-      show: false,
-    };
-  },
+  setup() {
+    const show = ref(false);
+
+    return { show }
+  }
 };
 </script>
 

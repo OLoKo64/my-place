@@ -1,29 +1,52 @@
+$body-color: rgb(200, 200, 200);
+$body-background-color: #181a1b;
+
+$aqua-green: rgb(0, 177, 136);
+
 body {
   font-family: "DM Mono", Arial, sans-serif;
-  color: rgb(200, 200, 200);
+  color: $body-color;
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  background-color: #181a1b;
+  background-color: $body-background-color;
 }
 
 a {
-  color: rgb(0, 177, 136);
+  color: $aqua-green !important;
   text-decoration: none;
   cursor: pointer;
 }
 
 a:hover {
-  color: rgb(0, 177, 136);
+  color: $aqua-green;
 }
 
 hr {
-  border: 2px solid rgb(0, 177, 136);
-  border-top: 1px solid #181a1b;
+  border: 2px solid $aqua-green;
+  border-top: 1px solid $body-background-color;
+}
+
+.indent-padding {
+  padding-left: 10px;
+}
+
+.component-spacing {
+  margin: 30px 0;
 }
 
 .h1-custom {
   font-size: 2rem;
+  font-weight: bold;
+}
+
+.h2-custom {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.h3-custom {
+  font-size: 1.3rem;
   font-weight: bold;
 }
 

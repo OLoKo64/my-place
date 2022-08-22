@@ -1,5 +1,5 @@
 <template>
-  <div class="my-projects">
+  <div class="my-projects component-spacing">
     <h1 class="h1-custom">My Projects</h1>
     <div class="project__all-cards">
       <div
@@ -47,7 +47,6 @@ export default {
 
 <style scoped lang="scss">
 .my-projects {
-  margin: 20px 0;
   @media only screen and (max-width: 680px) {
     .project__all-cards {
       margin: auto;

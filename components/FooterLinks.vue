@@ -4,7 +4,7 @@
     <div class="footer-links">
       <span class="home-links" :key="link.name" v-for="link in links">
         <span>|</span>
-        <a :href="link.link" target="_blank" rel="noopener">{{ link.name }}</a>
+        <a :href="link.link" target="_blank">{{ link.name }}</a>
       </span>
     </div>
   </div>

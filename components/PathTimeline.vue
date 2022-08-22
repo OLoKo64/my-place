@@ -2,7 +2,7 @@
   <div>
     <h1 class="h1-custom">Timeline</h1>
     <div :key="block.title" v-for="block in blocks">
-      <news-block
+      <NewsBlock
         :datePublished="block.datePublished"
         :title="block.title"
         :content="block.content"
@@ -11,18 +11,14 @@
         :readText="block.readText"
         :readLink="block.readLink"
       >
-      </news-block>
+      </NewsBlock>
     </div>
     <hr />
   </div>
 </template>
 
 <script lang="ts">
-import NewsBlock from "../components/NewsBlock.vue";
 export default {
-  components: {
-    NewsBlock,
-  },
   name: "PathTimeline",
   props: {
     blocks: {

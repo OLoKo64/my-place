@@ -4,7 +4,7 @@
       <strong>
         <NuxtLink class="my-name" to="/">{{ name }}</NuxtLink>
       </strong>
-      <nav class="nav">
+      <nav class="nav__links">
         <NuxtLink class="nav__link" to="/">Home</NuxtLink>
         <NuxtLink class="nav__link" to="/timeline/">Timeline</NuxtLink>
       </nav>
@@ -47,5 +47,9 @@ export default {
 
 .nav__link {
   margin-left: 20px;
+}
+
+.nav__links {
+  display: flex;
 }
 </style>
