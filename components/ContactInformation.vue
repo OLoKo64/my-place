@@ -6,7 +6,7 @@
         class="link-icon"
         :href="icon.link"
         target="_blank"
-        :key="icon"
+        :key="icon.name"
         v-for="icon in icons"
       >
         <img class="info-icon" :src="iconPath(icon.name)" :alt="icon.alt" :height="icon.height" />
@@ -78,6 +78,7 @@ export default {
 
   .link-icon {
     padding: 0 10px;
+    opacity: 0.8;
   }
 
   .info-icon:hover {

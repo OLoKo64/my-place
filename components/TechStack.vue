@@ -7,7 +7,7 @@
         :alt="icon.alt"
         :src="stackIconPath(icon.name)"
         :width="icon.width"
-        :key="icon"
+        :key="icon.name"
         v-for="icon in stackIcons"
       />
     </div>

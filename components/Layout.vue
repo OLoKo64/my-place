@@ -15,10 +15,10 @@
 
 <script lag="ts">
 export default {
-  data() {
-    return {
-      name: "Reinaldo Rozato Junior",
-    };
+  setup() {
+    const name = "Reinaldo Rozato Junior";
+
+    return { name };
   },
 };
 </script>
@@ -47,6 +47,7 @@ export default {
 
 .nav__link {
   margin-left: 20px;
+  font-size: 1.1rem
 }
 
 .nav__links {
