@@ -1,14 +1,24 @@
 import axios from "axios";
 
-async function fetchTimelineData() {
+interface TimelineData {
+  title: string;
+  datePublished: string;
+  content: string;
+  fullContent: string[];
+  readTime: string;
+  readText: string;
+  readLink: string;
+}
+
+async function fetchTimelineData(): Promise<TimelineData[]> {
   try {
     const { data } = await axios.get(
-      `${process.env.GRIDSOME_TIMELINE_DATA_URL}`
+      "https://raw.githubusercontent.com/OLoKo64/oloko64-dev/main/dynamic-data/files/timeline/timeline.json"
     );
     if (!data) {
       return [];
     }
-    return data.map((fileData) => {
+    return data.map((fileData: any) => {
       return {
         title: fileData.title,
         datePublished: fileData["date-published"],
@@ -24,4 +34,4 @@ async function fetchTimelineData() {
   }
 }
 
-export { fetchTimelineData };
+export { fetchTimelineData, TimelineData };

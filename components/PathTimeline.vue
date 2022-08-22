@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Timeline</h1>
+    <h1 class="h1-custom">Timeline</h1>
     <div :key="block.title" v-for="block in blocks">
-      <news-block
+      <NewsBlock
         :datePublished="block.datePublished"
         :title="block.title"
         :content="block.content"
@@ -11,18 +11,14 @@
         :readText="block.readText"
         :readLink="block.readLink"
       >
-      </news-block>
+      </NewsBlock>
     </div>
     <hr />
   </div>
 </template>
 
-<script>
-import { NewsBlock } from "~/components";
+<script lang="ts">
 export default {
-  components: {
-    NewsBlock,
-  },
   name: "PathTimeline",
   props: {
     blocks: {
@@ -32,5 +28,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

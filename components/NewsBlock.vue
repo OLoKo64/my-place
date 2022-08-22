@@ -1,21 +1,22 @@
 <template>
   <div>
-    <hr />
+    <hr>
     <p>{{ datePublished }}</p>
-    <h2>{{ title }}</h2>
+    <h2 class="h2-custom">{{ title }}</h2>
     <p>{{ content }}</p>
     <div v-if="show">
       <p :key="paragraph" v-for="paragraph in fullContent">{{ paragraph }}</p>
     </div>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
-      <a href="" @click="show = !show" v-if="!show">{{ readText }}</a>
-      <a href="" @click="show = !show" v-else>Hide</a>
+      <a @click="show = !show" v-if="!show">{{ readText }}</a>
+      <a @click="show = !show" v-else>Hide</a>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { ref } from "vue";
 export default {
   name: "NewsBlock",
   props: {
@@ -48,15 +49,15 @@ export default {
       default: "",
     },
   },
-  data() {
-    return {
-      show: false,
-    };
-  },
+  setup() {
+    const show = ref(false);
+
+    return { show }
+  }
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 .block__time {
   margin-bottom: 15px;
 }

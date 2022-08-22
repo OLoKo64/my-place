@@ -4,13 +4,13 @@
     <div class="footer-links">
       <span class="home-links" :key="link.name" v-for="link in links">
         <span>|</span>
-        <a :href="link.link" target="_blank" rel="noopener">{{ link.name }}</a>
+        <a :href="link.link" target="_blank">{{ link.name }}</a>
       </span>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "FooterLinks",
   props: {
@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 .footer-links {
   margin-top: 25px;
   margin-bottom: 25px;
