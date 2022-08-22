@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "FooterLinks",
   props: {
@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 .footer-links {
   margin-top: 25px;
   margin-bottom: 25px;

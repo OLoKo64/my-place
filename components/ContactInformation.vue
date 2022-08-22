@@ -21,11 +21,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {};
 </script>
 
-<style>
+<style scoped lang="scss">
 .contact__block {
   display: flex;
   justify-content: flex-start;

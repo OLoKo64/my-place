@@ -1,38 +1,21 @@
 <template>
-  <transition name="fade" appear>
-    <Layout>
-      <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+  <Layout>
+    <transition name="fade" appear>
+      <div>
+        <!-- Learn how to use images here: https://gridsome.org/docs/images -->
 
-      <profile-header />
-      <contact-information />
-      <tech-stack title="Work Stack" />
-      <my-projects :cards="myProjects" />
-      <footer-links :links="footerLinks" />
-    </Layout>
-  </transition>
+        <ProfileHeader />
+        <!-- <contact-information /> -->
+        <TechStack title="Work Stack" />
+        <MyProjects :cards="myProjects" />
+        <FooterLinks :links="footerLinks" />
+      </div>
+    </transition>
+  </Layout>
 </template>
 
-<script>
-import {
-  PathTimeline,
-  ProfileHeader,
-  TechStack,
-  FooterLinks,
-  MyProjects,
-  ContactInformation,
-} from "~/components";
+<script lang="ts">
 export default {
-  components: {
-    ContactInformation,
-    PathTimeline,
-    ProfileHeader,
-    MyProjects,
-    TechStack,
-    FooterLinks,
-  },
-  metaInfo: {
-    title: "Home",
-  },
   data() {
     return {
       footerLinks: [
@@ -87,13 +70,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.fade-enter-active {
-  transition: opacity 1s;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-</style>

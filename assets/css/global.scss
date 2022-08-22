@@ -1,0 +1,41 @@
+body {
+  font-family: "DM Mono", Arial, sans-serif;
+  color: rgb(200, 200, 200);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: #181a1b;
+}
+
+a {
+  color: rgb(0, 177, 136);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(0, 177, 136);
+}
+
+hr {
+  border: 2px solid rgb(0, 177, 136);
+  border-top: 1px solid #181a1b;
+}
+
+.h1-custom {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.h4-custom {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.fade-enter-active {
+  transition: opacity 1s;
+}
+
+.fade-enter {
+  opacity: 0;
+}

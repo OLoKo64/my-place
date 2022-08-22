@@ -2,43 +2,28 @@
   <div class="layout">
     <header class="header">
       <strong>
-        <g-link class="my-name" to="/">{{ name }}</g-link>
+        <NuxtLink class="my-name" to="/">{{ name }}</NuxtLink>
       </strong>
       <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/timeline/">Timeline</g-link>
+        <NuxtLink class="nav__link" to="/">Home</NuxtLink>
+        <NuxtLink class="nav__link" to="/timeline/">Timeline</NuxtLink>
       </nav>
     </header>
-    <slot/>
+    <slot />
   </div>
 </template>
 
-<script>
+<script lag="ts">
 export default {
   data() {
     return {
-      name: 'Reinaldo Rozato Junior'
-    }
+      name: "Reinaldo Rozato Junior",
+    };
   },
-}
+};
 </script>
 
-
-<style>
-body {
-  font-family: 'DM Mono', Arial, sans-serif;
-  color: rgb(200, 200, 200);
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-  background-color: #181a1b;
-}
-
-a {
-  color: rgb(0, 177, 136);
-  text-decoration: none;
-}
-
+<style scoped lang="scss">
 .my-name {
   font-size: 1.5rem;
   font-weight: bold;

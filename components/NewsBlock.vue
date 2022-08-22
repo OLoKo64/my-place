@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hr />
+    <hr>
     <p>{{ datePublished }}</p>
     <h2>{{ title }}</h2>
     <p>{{ content }}</p>
@@ -9,13 +9,13 @@
     </div>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
-      <a href="" @click="show = !show" v-if="!show">{{ readText }}</a>
-      <a href="" @click="show = !show" v-else>Hide</a>
+      <a @click="show = !show" v-if="!show">{{ readText }}</a>
+      <a @click="show = !show" v-else>Hide</a>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "NewsBlock",
   props: {
@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 .block__time {
   margin-bottom: 15px;
 }

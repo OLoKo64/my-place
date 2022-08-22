@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="profile-header">
     <div class="flex-display-block">
       <div class="profile-pic-block">
-        <g-image
+        <img
           class="profile-pic"
           alt="Profile Image"
-          src="~/img/profile_pic.jpg"
+          src="../assets/img/profile_pic.jpg"
           width="175"
         />
       </div>
@@ -28,34 +28,38 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "ProfileHeader"
+  name: "ProfileHeader",
 };
 </script>
 
-<style>
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 600px) {
+<style scoped lang="scss">
+.profile-header {
+  margin: 20px 0;
+  
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (max-width: 600px) {
+    .flex-display-block {
+      display: block !important;
+    }
+
+    .profile-pic-block {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   .flex-display-block {
-    display: block !important;
-  }
-
-  .profile-pic-block {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: top;
   }
-}
 
-.flex-display-block {
-  display: flex;
-  justify-content: flex-start;
-  align-items: top;
-}
-
-.profile-pic {
-  margin-right: 20px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
+  .profile-pic {
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+  }
 }
 </style>

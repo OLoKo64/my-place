@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Timeline</h1>
+    <h1 class="h1-custom">Timeline</h1>
     <div :key="block.title" v-for="block in blocks">
       <news-block
         :datePublished="block.datePublished"
@@ -17,8 +17,8 @@
   </div>
 </template>
 
-<script>
-import { NewsBlock } from "~/components";
+<script lang="ts">
+import NewsBlock from "../components/NewsBlock.vue";
 export default {
   components: {
     NewsBlock,
@@ -32,5 +32,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
