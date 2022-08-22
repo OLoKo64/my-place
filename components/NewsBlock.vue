@@ -2,7 +2,7 @@
   <div>
     <hr>
     <p>{{ datePublished }}</p>
-    <h2 class="h2-custom">{{ title }}</h2>
+    <h2 class="h2-custom block__title">{{ title }}</h2>
     <p>{{ content }}</p>
     <div v-if="show">
       <p :key="paragraph" v-for="paragraph in fullContent">{{ paragraph }}</p>
@@ -60,6 +60,10 @@ export default {
 <style scoped lang="scss">
 .block__time {
   margin-bottom: 15px;
+}
+
+.block__title {
+  margin-bottom: 30px;
 }
 
 .block__read-time {
