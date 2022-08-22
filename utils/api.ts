@@ -1,6 +1,16 @@
 import axios from "axios";
 
-async function fetchTimelineData() {
+interface TimelineData {
+  title: string;
+  datePublished: string;
+  content: string;
+  fullContent: string[];
+  readTime: string;
+  readText: string;
+  readLink: string;
+}
+
+async function fetchTimelineData(): Promise<TimelineData[]> {
   try {
     const { data } = await axios.get(
       "https://raw.githubusercontent.com/OLoKo64/oloko64-dev/main/dynamic-data/files/timeline/timeline.json"
@@ -24,4 +34,4 @@ async function fetchTimelineData() {
   }
 }
 
-export { fetchTimelineData };
+export { fetchTimelineData, TimelineData };

@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <transition name="fade" appear>
-      <div v-if="timeline.length > 0">
+      <div v-if="timeline.length">
         <path-timeline :blocks="timeline" />
       </div>
       <div v-else>
@@ -12,12 +12,12 @@
 </template>
 
 <script lang="ts">
-import { onBeforeMount, ref } from "vue";
-import { fetchTimelineData } from "../utils";
+import { onBeforeMount, ref, Ref } from "vue";
+import { fetchTimelineData, TimelineData } from "../utils";
 
 export default {
   setup() {
-    const timeline = ref([
+    const timeline: Ref<TimelineData[]> = ref([
       {
         datePublished: "13/08/2022",
         title: "Creating this website",
