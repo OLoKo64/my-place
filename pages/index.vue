@@ -60,10 +60,10 @@ export default {
         link: "https://github.com/OLoKo64/steam-game-prices",
       },
       {
-        title: "This Website",
-        content: "A simple static website built with Vue.js and Gridsome.",
+        title: "OLoKo64-dev",
+        content: "The website where you are right now. Built using the Nuxt.js framework.",
         language: "Vue",
-        link: "https://github.com/OLoKo64/my-place",
+        link: "https://github.com/OLoKo64/oloko64-dev",
       },
     ];
 
