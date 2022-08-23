@@ -2,7 +2,7 @@
   <div class="profile-header component-spacing">
     <div class="flex-display-block">
       <div class="profile-pic-block">
-        <img
+        <b-img
           class="profile-pic"
           alt="Profile Image"
           src="../assets/img/profile_pic.jpg"

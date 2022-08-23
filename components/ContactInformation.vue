@@ -1,15 +1,22 @@
 <template>
   <div class="contact-information component-spacing">
-    <h3 class="h3-custom" >Contact Information</h3>
+    <h3 class="h3-custom">Contact Information</h3>
     <div class="contact__block">
       <a
         class="link-icon"
-        :href="icon.link"
         target="_blank"
+        v-b-tooltip.hover.bottom
+        :title="icon.name"
+        :href="icon.link"
         :key="icon.name"
         v-for="icon in icons"
       >
-        <img class="info-icon" :src="iconPath(icon.name)" :alt="icon.alt" :height="icon.height" />
+        <b-img
+          class="info-icon"
+          :src="iconPath(icon.name)"
+          :alt="icon.alt"
+          :height="icon.height"
+        />
       </a>
     </div>
   </div>

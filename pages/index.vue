@@ -19,7 +19,7 @@ export default {
   setup() {
     const footerLinks = [
       {
-        name: "NuxtJs",
+        name: "Nuxt.js",
         link: "https://nuxtjs.org/",
       },
       {

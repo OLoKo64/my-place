@@ -6,7 +6,7 @@
           <path-timeline :blocks="timeline" />
         </div>
         <div class="loading-block" v-else>
-          <h2 class="h2-custom text-animation">Loading...</h2>
+          <b-spinner label="Spinning" variant="secondary"></b-spinner>
         </div>
       </transition>
     </Layout>
@@ -45,22 +45,6 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 80px;
-  }
-
-  .text-animation {
-    animation: animate 1.3s linear infinite;
-  }
-
-  @keyframes animate {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.7;
-    }
-    100% {
-      opacity: 0;
-    }
   }
 }
 </style>

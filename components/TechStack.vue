@@ -2,8 +2,10 @@
   <div class="tech-stack component-spacing">
     <h3 class="h3-custom stack__title">{{ title }}</h3>
     <div class="indent-padding">
-      <img
+      <b-img
         class="stack-image"
+        v-b-tooltip.hover.bottom
+        :title="icon.name"
         :alt="icon.alt"
         :src="stackIconPath(icon.name)"
         :width="icon.width"
