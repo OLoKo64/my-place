@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="path-timeline">
     <h1 class="h1-custom">Timeline</h1>
     <div :key="block.title" v-for="block in blocks">
       <NewsBlock

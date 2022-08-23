@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <hr>
+  <div class="news-block">
+    <hr />
     <p>{{ datePublished }}</p>
     <h2 class="h2-custom block__title">{{ title }}</h2>
     <p>{{ content }}</p>
@@ -52,23 +52,25 @@ export default {
   setup() {
     const show = ref(false);
 
-    return { show }
-  }
+    return { show };
+  },
 };
 </script>
 
 <style scoped lang="scss">
-.block__time {
-  margin-bottom: 15px;
-}
+.news-block {
+  .block__time {
+    margin-bottom: 15px;
+  }
 
-.block__title {
-  margin-bottom: 30px;
-}
+  .block__title {
+    margin-bottom: 30px;
+  }
 
-.block__read-time {
-  font-size: 0.8rem;
-  color: rgb(200, 200, 200);
-  margin-right: 10px;
+  .block__read-time {
+    font-size: 0.8rem;
+    color: rgb(200, 200, 200);
+    margin-right: 10px;
+  }
 }
 </style>

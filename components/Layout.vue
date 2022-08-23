@@ -24,33 +24,33 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.my-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .layout {
   max-width: 1280px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-}
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
+  .my-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 80px;
+  }
 
-.nav__link {
-  margin-left: 20px;
-  font-size: 1.1rem
-}
+  .nav__link {
+    margin-left: 20px;
+    font-size: 1.1rem;
+  }
 
-.nav__links {
-  display: flex;
+  .nav__links {
+    display: flex;
+  }
 }
 </style>

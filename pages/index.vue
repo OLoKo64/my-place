@@ -1,15 +1,17 @@
 <template>
-  <Layout>
-    <transition name="fade" appear>
-      <div>
-        <ProfileHeader />
-        <ContactInformation />
-        <TechStack title="Work Stack" />
-        <MyProjects :cards="myProjects" />
-        <FooterLinks :links="footerLinks" />
-      </div>
-    </transition>
-  </Layout>
+  <div>
+    <Layout>
+      <transition name="fade" appear>
+        <div>
+          <ProfileHeader />
+          <ContactInformation />
+          <TechStack title="Work Stack" />
+          <MyProjects :cards="myProjects" />
+          <FooterLinks :links="footerLinks" />
+        </div>
+      </transition>
+    </Layout>
+  </div>
 </template>
 
 <script lang="ts">

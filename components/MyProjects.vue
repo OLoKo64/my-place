@@ -56,6 +56,7 @@ export default {
 
   .card__title {
     margin: 20px 0;
+    color: rgb(0, 177, 136);
   }
 
   .card-language-text {

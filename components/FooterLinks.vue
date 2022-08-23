@@ -26,10 +26,9 @@ export default {
 .footer-links {
   margin-top: 25px;
   margin-bottom: 25px;
-}
-
-.home-links a {
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
+  .home-links a {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
 </style>
