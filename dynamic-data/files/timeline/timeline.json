@@ -1,9 +1,15 @@
 [
   {
-    "date-published": "13/08/2022",
-    "title": "Under development",
-    "content": "Nothing yet",
-    "read-time": "2 min read",
+    "date-published": "22/08/2022",
+    "title": "Migrating this website to Nuxt.js",
+    "content": "The main reasons of why I migrate this site from Gridsome to Nuxt.js",
+    "full-content": [
+      "I was very familiar with the Gridsome framework and it is sad that it is no longer kept up to date, especially due to lack of sponsors.",
+      "Nuxt.js is a framework very similar to Gridsome but kept up to date and with some very good features such as Server Side Rendering (SSR).",
+      "I've had been looking at this framework for some time (Nuxt.js), but now it seemed like a good opportunity to jump right in and get to know this technology, it was a great experience with both frameworks.",
+      "I took advantage of this rewrite and made multiple improvements to the code, such as adding Typescript, simplifying some components, and adding sass to the project, making it way easier to improve in the future."
+    ],
+    "read-time": "1 min read",
     "read-text": "Read More...",
     "read-link": "#"
   },
