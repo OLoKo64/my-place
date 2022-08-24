@@ -1,19 +1,25 @@
 <template>
   <div class="my-projects component-spacing">
-    <h1 class="h1-custom">My Projects</h1>
+    <h1 class="h1-custom">
+      My Projects
+    </h1>
     <div class="project__all-cards">
       <div
-        v-on:click="clickCard(card.link)"
-        class="projects__card"
-        :key="card.title"
         v-for="card in cards"
+        :key="card.title"
+        class="projects__card"
+        @click="clickCard(card.link)"
       >
         <div class="projects__interior-card">
-          <h4 class="h4-custom card__title">{{ card.title }}</h4>
+          <h4 class="h4-custom card__title">
+            {{ card.title }}
+          </h4>
           <p class="projects__card-content">
             {{ cardContentMaxLength(card.content) }}
           </p>
-          <p class="card-language-text">{{ card.language }}</p>
+          <p class="card-language-text">
+            {{ card.language }}
+          </p>
         </div>
       </div>
     </div>
@@ -22,27 +28,27 @@
 
 <script lang="ts">
 export default {
-  name: "MyProjects",
+  name: 'MyProjects',
   props: {
     cards: {
       type: Array,
-      default: () => [],
-    },
+      default: () => []
+    }
   },
   methods: {
-    clickCard(link: string) {
-      window.open(link, "_blank");
+    clickCard (link: string) {
+      window.open(link, '_blank')
     },
-    cardContentMaxLength(text: string) {
-      const maxLength = 100;
+    cardContentMaxLength (text: string) {
+      const maxLength = 100
       if (text.length > maxLength) {
-        return text.substring(0, maxLength) + "...";
+        return text.substring(0, maxLength) + '...'
       } else {
-        return text;
+        return text
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

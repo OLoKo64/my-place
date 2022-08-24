@@ -1,3 +1,3 @@
-import { fetchTimelineData, TimelineData } from "./api";
+import { fetchTimelineData, TimelineData } from './api'
 
-export { fetchTimelineData, TimelineData };
+export { fetchTimelineData, TimelineData }

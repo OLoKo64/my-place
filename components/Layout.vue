@@ -5,8 +5,12 @@
         <NuxtLink class="my-name" to="/">{{ name }}</NuxtLink>
       </strong>
       <nav class="nav__links">
-        <NuxtLink class="nav__link" to="/">Home</NuxtLink>
-        <NuxtLink class="nav__link" to="/timeline/">Timeline</NuxtLink>
+        <NuxtLink class="nav__link" to="/">
+          Home
+        </NuxtLink>
+        <NuxtLink class="nav__link" to="/timeline/">
+          Timeline
+        </NuxtLink>
       </nav>
     </header>
     <slot />
@@ -15,12 +19,12 @@
 
 <script lag="ts">
 export default {
-  setup() {
-    const name = "Reinaldo Rozato Junior";
+  setup () {
+    const name = 'Reinaldo Rozato Junior'
 
-    return { name };
-  },
-};
+    return { name }
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -35,7 +39,7 @@ export default {
     font-weight: bold;
     text-decoration: none;
   }
-  
+
   .header {
     display: flex;
     justify-content: space-between;
