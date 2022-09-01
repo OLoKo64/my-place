@@ -5,8 +5,8 @@
         <div v-if="timeline.length">
           <path-timeline :blocks="timeline" />
         </div>
-        <div class="loading-block" v-else>
-          <b-spinner label="Spinning" variant="secondary"></b-spinner>
+        <div v-else class="loading-block">
+          <b-spinner label="Spinning" variant="secondary" />
         </div>
       </transition>
     </Layout>
@@ -14,29 +14,29 @@
 </template>
 
 <script lang="ts">
-import { onBeforeMount, ref, Ref } from "vue";
-import { fetchTimelineData, TimelineData } from "../utils";
+import { onBeforeMount, ref, Ref } from 'vue'
+import { fetchTimelineData, TimelineData } from '../utils'
 
 export default {
-  setup() {
-    const timeline: Ref<TimelineData[]> = ref([]);
+  setup () {
+    const timeline: Ref<TimelineData[]> = ref([])
 
-    async function fetchTimeline() {
-      const timelineData = await fetchTimelineData();
+    async function fetchTimeline () {
+      const timelineData = await fetchTimelineData()
       if (timelineData.length) {
-        timeline.value = timelineData;
+        timeline.value = timelineData
       }
     }
 
     onBeforeMount(() => {
-      fetchTimeline();
-    });
+      fetchTimeline()
+    })
 
     return {
-      timeline,
-    };
-  },
-};
+      timeline
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

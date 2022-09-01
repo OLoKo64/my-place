@@ -1,8 +1,8 @@
 <template>
   <div class="footer-links">
-    <hr />
+    <hr>
     <div class="footer-links">
-      <span class="home-links" :key="link.name" v-for="link in links">
+      <span v-for="link in links" :key="link.name" class="home-links">
         <span>|</span>
         <a :href="link.link" target="_blank">{{ link.name }}</a>
       </span>
@@ -12,14 +12,14 @@
 
 <script lang="ts">
 export default {
-  name: "FooterLinks",
+  name: 'FooterLinks',
   props: {
     links: {
       type: Array,
-      default: () => [],
-    },
-  },
-};
+      default: () => []
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

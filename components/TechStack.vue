@@ -1,16 +1,18 @@
 <template>
   <div class="tech-stack component-spacing">
-    <h3 class="h3-custom stack__title">{{ title }}</h3>
+    <h3 class="h3-custom stack__title">
+      {{ title }}
+    </h3>
     <div class="indent-padding">
       <b-img
-        class="stack-image"
+        v-for="icon in stackIcons"
+        :key="icon.name"
         v-b-tooltip.hover.bottom
+        class="stack-image"
         :title="icon.name"
         :alt="icon.alt"
         :src="stackIconPath(icon.name)"
         :width="icon.width"
-        :key="icon.name"
-        v-for="icon in stackIcons"
       />
     </div>
   </div>
@@ -18,14 +20,14 @@
 
 <script lang="ts">
 export default {
-  name: "TechStack",
+  name: 'TechStack',
   props: {
     title: {
       type: String,
-      default: "My Stack",
-    },
+      default: 'My Stack'
+    }
   },
-  setup() {
+  setup () {
     interface StackIcon {
       name: string;
       link: string;
@@ -34,86 +36,86 @@ export default {
     }
     const stackIcons: StackIcon[] = [
       {
-        name: "rust",
-        alt: "rust",
-        width: "45px",
-        link: "https://www.rust-lang.org/",
+        name: 'rust',
+        alt: 'rust',
+        width: '45px',
+        link: 'https://www.rust-lang.org/'
       },
       {
-        name: "python",
-        alt: "python",
-        width: "25px",
-        link: "https://www.python.org/",
+        name: 'python',
+        alt: 'python',
+        width: '25px',
+        link: 'https://www.python.org/'
       },
       {
-        name: "typescript",
-        alt: "typescript",
-        width: "25px",
-        link: "https://www.typescriptlang.org/",
+        name: 'typescript',
+        alt: 'typescript',
+        width: '25px',
+        link: 'https://www.typescriptlang.org/'
       },
       {
-        name: "javascript",
-        alt: "javascript",
-        width: "25px",
-        link: "https://www.javascript.com/",
+        name: 'javascript',
+        alt: 'javascript',
+        width: '25px',
+        link: 'https://www.javascript.com/'
       },
       {
-        name: "vuejs",
-        alt: "vuejs",
-        width: "25px",
-        link: "https://vuejs.org/",
+        name: 'vuejs',
+        alt: 'vuejs',
+        width: '25px',
+        link: 'https://vuejs.org/'
       },
       {
-        name: "linux",
-        alt: "linux",
-        width: "25px",
-        link: "https://www.linux.org/",
+        name: 'linux',
+        alt: 'linux',
+        width: '25px',
+        link: 'https://www.linux.org/'
       },
       {
-        name: "react",
-        alt: "react",
-        width: "25px",
-        link: "https://reactjs.org/",
+        name: 'react',
+        alt: 'react',
+        width: '25px',
+        link: 'https://reactjs.org/'
       },
       {
-        name: "git",
-        alt: "git",
-        width: "25px",
-        link: "https://git-scm.com/",
+        name: 'git',
+        alt: 'git',
+        width: '25px',
+        link: 'https://git-scm.com/'
       },
       {
-        name: "html5",
-        alt: "html5",
-        width: "25px",
-        link: "https://www.w3.org/TR/html5/",
+        name: 'html5',
+        alt: 'html5',
+        width: '25px',
+        link: 'https://www.w3.org/TR/html5/'
       },
       {
-        name: "nodejs",
-        alt: "nodejs",
-        width: "25px",
-        link: "https://nodejs.org/",
+        name: 'nodejs',
+        alt: 'nodejs',
+        width: '25px',
+        link: 'https://nodejs.org/'
       },
       {
-        name: "bootstrap",
-        alt: "bootstrap",
-        width: "25px",
-        link: "https://getbootstrap.com/",
+        name: 'bootstrap',
+        alt: 'bootstrap',
+        width: '25px',
+        link: 'https://getbootstrap.com/'
       },
       {
-        name: "sass",
-        alt: "sass",
-        width: "25px",
-        link: "https://sass-lang.com/",
+        name: 'sass',
+        alt: 'sass',
+        width: '25px',
+        link: 'https://sass-lang.com/'
       }
     ]
 
     // The "require" is needed to tell webpack to pack the icon
     const stackIconPath = (name: string) =>
-      require(`../assets/img/tech_stack/${name}.png`);
+      require(`../assets/img/tech_stack/${name}.png`)
 
     return { stackIcons, stackIconPath }
   }
-};
+}
 </script>
 
 <style scoped lang="scss">

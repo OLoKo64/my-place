@@ -1,60 +1,64 @@
 <template>
   <div class="news-block">
-    <hr />
+    <hr>
     <p>{{ datePublished }}</p>
-    <h2 class="h2-custom block__title">{{ title }}</h2>
+    <h2 class="h2-custom block__title">
+      {{ title }}
+    </h2>
     <p>{{ content }}</p>
     <div v-if="show">
-      <p :key="paragraph" v-for="paragraph in fullContent">{{ paragraph }}</p>
+      <p v-for="paragraph in fullContent" :key="paragraph">
+        {{ paragraph }}
+      </p>
     </div>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
-      <a @click="show = !show" v-if="!show">{{ readText }}</a>
-      <a @click="show = !show" v-else>Hide</a>
+      <a v-if="!show" @click="show = !show">{{ readText }}</a>
+      <a v-else @click="show = !show">Hide</a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 export default {
-  name: "NewsBlock",
+  name: 'NewsBlock',
   props: {
     datePublished: {
       type: String,
-      default: "",
+      default: ''
     },
     title: {
       type: String,
-      default: "",
+      default: ''
     },
     content: {
       type: String,
-      default: "",
+      default: ''
     },
     fullContent: {
       type: Array,
-      default: () => [],
+      default: () => []
     },
     readTime: {
       type: String,
-      default: "",
+      default: ''
     },
     readText: {
       type: String,
-      default: "Read More...",
+      default: 'Read More...'
     },
     readLink: {
       type: String,
-      default: "",
-    },
+      default: ''
+    }
   },
-  setup() {
-    const show = ref(false);
+  setup () {
+    const show = ref(false)
 
-    return { show };
-  },
-};
+    return { show }
+  }
+}
 </script>
 
 <style scoped lang="scss">
