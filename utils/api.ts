@@ -10,6 +10,11 @@ interface TimelineData {
   readLink: string;
 }
 
+interface EmailResponse {
+  message: string;
+  status: number;
+}
+
 async function fetchTimelineData (): Promise<TimelineData[]> {
   try {
     const { data } = await axios.get(
@@ -34,4 +39,9 @@ async function fetchTimelineData (): Promise<TimelineData[]> {
   }
 }
 
-export { fetchTimelineData, TimelineData }
+async function sendContactEmail (subject :string, body: string) : Promise<EmailResponse> {
+  const { data } = await axios.post('https://oloko64-dev-email-worker.herokuapp.com/send-mail', { subject, body })
+  return data
+}
+
+export { fetchTimelineData, TimelineData, sendContactEmail }

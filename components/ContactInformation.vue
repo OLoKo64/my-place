@@ -7,7 +7,7 @@
       <a
         v-for="icon in icons"
         :key="icon.name"
-        v-b-tooltip.hover.bottom
+        v-b-tooltip.hover.top
         class="link-icon"
         target="_blank"
         :title="icon.name"
@@ -21,57 +21,54 @@
         />
       </a>
     </div>
+    <ContactForm />
   </div>
 </template>
 
 <script lang="ts">
 export default {
   setup () {
-    interface Icon {
-      name: string;
-      link: string;
-      alt: string;
-      height: string;
-    }
-
-    const icons: Icon[] = [
-      {
-        name: 'github',
-        alt: 'github',
-        height: '28px',
-        link: 'https://github.com/OLoKo64'
-      },
-      {
-        name: 'telegram',
-        alt: 'telegram',
-        height: '28px',
-        link: 'https://t.me/5516997226813'
-      },
-      {
-        name: 'whatsapp',
-        alt: 'whatsapp',
-        height: '28px',
-        link: 'https://wa.me/qr/B5FIPTNB2QW2I1'
-      },
-      {
-        name: 'linkedin',
-        alt: 'linkedin',
-        height: '28px',
-        link: 'https://www.linkedin.com/in/reinaldo-rozato-junior-309ba319a/'
-      },
-      {
-        name: 'email',
-        alt: 'email',
-        height: '28px',
-        link: 'mailto:reinaldorozatoj@gmail.com'
-      }
-    ]
-
-    // The "require" is needed to tell webpack to pack the icon
-    const iconPath = (name: string) =>
-      require(`../assets/img/icons/${name}.png`)
-
-    return { icons, iconPath }
+        interface Icon {
+            name: string;
+            link: string;
+            alt: string;
+            height: string;
+        }
+        const icons: Icon[] = [
+          {
+            name: 'github',
+            alt: 'github',
+            height: '28px',
+            link: 'https://github.com/OLoKo64'
+          },
+          {
+            name: 'telegram',
+            alt: 'telegram',
+            height: '28px',
+            link: 'https://t.me/5516997226813'
+          },
+          {
+            name: 'whatsapp',
+            alt: 'whatsapp',
+            height: '28px',
+            link: 'https://wa.me/qr/B5FIPTNB2QW2I1'
+          },
+          {
+            name: 'linkedin',
+            alt: 'linkedin',
+            height: '28px',
+            link: 'https://www.linkedin.com/in/reinaldo-rozato-junior-309ba319a/'
+          },
+          {
+            name: 'email',
+            alt: 'email',
+            height: '28px',
+            link: 'mailto:reinaldorozatoj@gmail.com'
+          }
+        ]
+        // The "require" is needed to tell webpack to pack the icon
+        const iconPath = (name: string) => require(`../assets/img/icons/${name}.png`)
+        return { icons, iconPath }
   }
 }
 </script>

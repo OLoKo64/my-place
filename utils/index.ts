@@ -1,3 +1,3 @@
-import { fetchTimelineData, TimelineData } from './api'
+import { fetchTimelineData, TimelineData, sendContactEmail } from './api'
 
-export { fetchTimelineData, TimelineData }
+export { fetchTimelineData, TimelineData, sendContactEmail }
