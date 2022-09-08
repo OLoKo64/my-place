@@ -3,7 +3,7 @@
     <h1 class="h1-custom">
       My Projects
     </h1>
-    <div class="project__all-cards">
+    <div v-if="false" class="project__all-cards">
       <div
         v-for="card in cards"
         :key="card.title"
@@ -22,6 +22,9 @@
           </p>
         </div>
       </div>
+    </div>
+    <div v-else class="loading-block">
+      <b-spinner label="Spinning" variant="secondary" />
     </div>
   </div>
 </template>
@@ -91,6 +94,13 @@ export default {
 
   .projects__card-content {
     height: 100px;
+  }
+
+  .loading-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 </style>

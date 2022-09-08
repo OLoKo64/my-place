@@ -14,26 +14,24 @@
 </template>
 
 <script lang="ts">
-import { onBeforeMount, ref, Ref } from 'vue'
-import { fetchTimelineData, TimelineData } from '../utils'
+import { TimelineData } from '../utils'
+import { getters } from '../store/data'
 
 export default {
-  setup () {
-    const timeline: Ref<TimelineData[]> = ref([])
-
-    async function fetchTimeline () {
-      const timelineData = await fetchTimelineData()
-      if (timelineData.length) {
-        timeline.value = timelineData
-      }
+  data: () => ({
+  }),
+  computed: {
+    timeline () {
+      // @ts-ignore
+      const timeline: TimelineData[] = this.$store.getters['data/getTimeline'] as ReturnType<typeof getters.getTimeline>
+      return timeline
     }
-
-    onBeforeMount(() => {
-      fetchTimeline()
-    })
-
-    return {
-      timeline
+  },
+  beforeMount () {
+    // @ts-ignore
+    if (!this.$store.getters['data/getTimeline'].length) {
+      // @ts-ignore
+      this.$store.dispatch('data/fetchTimelineDataStore')
     }
   }
 }
