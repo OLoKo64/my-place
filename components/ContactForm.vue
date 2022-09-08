@@ -16,7 +16,6 @@
         type="text"
         maxlength="50"
         placeholder="Subject"
-        required
       />
       <b-form-textarea
         v-model="formData.body"

@@ -15,6 +15,9 @@
 </template>
 
 <script lang="ts">
+import { ProjectsData } from '../utils'
+import { getters } from '../store/data'
+
 export default {
   setup () {
     const footerLinks = [
@@ -32,42 +35,21 @@ export default {
       }
     ]
 
-    const myProjects = [
-      {
-        title: 'TransferSh Helper Rusted',
-        content:
-          'Store your transfer.sh links, so you can remember them later and know when they will expire, but now written in Rust.',
-        language: 'Rust',
-        link: 'https://github.com/OLoKo64/transfer-sh-helper-rusted'
-      },
-      {
-        title: 'Regrep',
-        content: 'Recreate grep in Rust, mostly for learning.',
-        language: 'Rust',
-        link: 'https://github.com/OLoKo64/regrep'
-      },
-      {
-        title: 'Turing Machine',
-        content: 'Recreation of the Turing Machine in PHP.',
-        language: 'PHP',
-        link: 'https://github.com/'
-      },
-      {
-        title: 'Steam Prices Crawler',
-        content:
-          'Crawler to get prices from Steam and output them to a csv file.',
-        language: 'Python',
-        link: 'https://github.com/OLoKo64/steam-game-prices'
-      },
-      {
-        title: 'OLoKo64-dev',
-        content: 'The website where you are right now. Built using the Nuxt.js framework.',
-        language: 'Vue',
-        link: 'https://github.com/OLoKo64/oloko64-dev'
-      }
-    ]
-
-    return { footerLinks, myProjects }
+    return { footerLinks }
+  },
+  computed: {
+    myProjects () {
+      // @ts-ignore
+      const myProjects: ProjectsData[] = this.$store.getters['data/getProjects'] as ReturnType<typeof getters.getProjects>
+      return myProjects
+    }
+  },
+  beforeMount () {
+    // @ts-ignore
+    if (!this.$store.getters['data/getProjects'].length) {
+      // @ts-ignore
+      this.$store.dispatch('data/fetchProjectsDataStore')
+    }
   }
 }
 </script>
