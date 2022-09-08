@@ -3,7 +3,7 @@
     <h1 class="h1-custom">
       My Projects
     </h1>
-    <div v-if="false" class="project__all-cards">
+    <div v-if="cards.length" class="project__all-cards">
       <div
         v-for="card in cards"
         :key="card.title"
