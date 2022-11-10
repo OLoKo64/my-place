@@ -61,7 +61,7 @@ async function fetchProjectsData (): Promise<ProjectsData[]> {
 }
 
 async function sendContactEmail (subject :string, body: string) : Promise<EmailResponse> {
-  const { data } = await axios.post('https://oloko64-dev-email-worker.herokuapp.com/send-mail', { subject, body })
+  const { data } = await axios.post('https://oloko64-dev-email-worker-rust.onrender.com/send-mail', { subject, body })
   return data
 }
 
