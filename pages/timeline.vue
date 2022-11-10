@@ -10,6 +10,7 @@
         </div>
       </transition>
     </Layout>
+    <div class="spacer layer" />
   </div>
 </template>
 
@@ -43,6 +44,17 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 80px;
+  }
+  .spacer {
+    aspect-ratio: 1300/300;
+    margin-top: -10%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .layer {
+    background-image: url('../assets/img/layered-waves-haikei.svg');
   }
 }
 </style>

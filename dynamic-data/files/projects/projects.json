@@ -1,9 +1,27 @@
 [
   {
+    "title": "OLoKo64-dev",
+    "content": "The website where you are right now. Built using the Nuxt.js framework.",
+    "language": "Typescript",
+    "link": "https://github.com/OLoKo64/oloko64-dev"
+  },
+  {
     "title": "TransferSh Helper Rusted",
     "content": "Store your transfer.sh links, so you can remember them later and know when they will expire, but now written in Rust.",
     "language": "Rust",
     "link": "https://github.com/OLoKo64/transfer-sh-helper-rusted"
+  },
+  {
+    "title": "Sendgrid Thin",
+    "content": "A small unofficial library to send emails using Sendgrid with no build in runtime.",
+    "language": "Rust",
+    "link": "https://crates.io/crates/sendgrid_thin"
+  },
+  {
+    "title": "Rust Code Examples",
+    "content": "My code during the journey learning Rust.",
+    "language": "Rust",
+    "link": "https://github.com/OLoKo64/rust-code-examples"
   },
   {
     "title": "Regrep",
@@ -22,11 +40,5 @@
     "content": "Crawler to get prices from Steam and output them to a csv file.",
     "language": "Python",
     "link": "https://github.com/OLoKo64/steam-game-prices"
-  },
-  {
-    "title": "OLoKo64-dev",
-    "content": "The website where you are right now. Built using the Nuxt.js framework.",
-    "language": "Vue",
-    "link": "https://github.com/OLoKo64/oloko64-dev"
   }
 ]
