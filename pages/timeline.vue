@@ -10,7 +10,7 @@
         </div>
       </transition>
     </Layout>
-    <div class="spacer layer" />
+    <div v-if="timeline.length" class="spacer layer" />
   </div>
 </template>
 
