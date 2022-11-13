@@ -46,8 +46,8 @@ export default {
     margin-top: 80px;
   }
   .spacer {
-    aspect-ratio: 1300/300;
-    margin-top: -10%;
+    position: absolute;
+    aspect-ratio: 900/300;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;

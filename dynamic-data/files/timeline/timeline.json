@@ -11,7 +11,12 @@
     ],
     "read-time": "1 min read",
     "read-text": "Read More...",
-    "read-link": "#"
+    "read-links": [
+      {
+        "text": "text 1",
+        "link": "https://github.com/"
+      }
+    ]
   },
   {
     "date-published": "13/08/2022",
@@ -25,6 +30,11 @@
     ],
     "read-time": "1 min read",
     "read-text": "Read More...",
-    "read-link": "#"
+    "read-links": [
+      {
+        "text": "text",
+        "link": "https://github.com/OLoKo64"
+      }
+    ]
   }
 ]

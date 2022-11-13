@@ -38,7 +38,7 @@ async function fetchTimelineData (): Promise<TimelineData[]> {
         fullContent: fileData['full-content'],
         readTime: fileData['read-time'],
         readText: fileData['read-text'],
-        readLink: fileData['read-link']
+        readLinks: fileData['read-links']
       }
     })
   } catch (_) {

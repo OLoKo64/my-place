@@ -10,6 +10,7 @@
       <p v-for="paragraph in fullContent" :key="paragraph">
         {{ paragraph }}
       </p>
+      <a :key="link.text" :href="link.link" v-for="link in readLinks">{{link.text}}</a>
     </div>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
@@ -20,10 +21,13 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
 export default {
   name: 'NewsBlock',
   props: {
+    isOpen: {
+      type: Boolean,
+      default: false
+    },
     datePublished: {
       type: String,
       default: ''
@@ -48,15 +52,18 @@ export default {
       type: String,
       default: 'Read More...'
     },
-    readLink: {
-      type: String,
-      default: ''
+    readLinks: {
+      type: Array,
+      default: () => []
     }
   },
-  setup () {
-    const show = ref(false)
-
-    return { show }
+  data () {
+    return {
+      show: false
+    }
+  },
+  created () {
+    this.show = this.isOpen
   }
 }
 </script>

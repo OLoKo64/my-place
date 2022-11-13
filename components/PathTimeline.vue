@@ -1,9 +1,17 @@
 <template>
   <div class="path-timeline">
-    <h1 class="h1-custom">
-      Timeline
-    </h1>
-    <div v-for="block in blocks" :key="block.title">
+    <h1 class="h1-custom">Timeline</h1>
+    <NewsBlock
+      :is-open="true"
+      :date-published="firstBlock.datePublished"
+      :title="firstBlock.title"
+      :content="firstBlock.content"
+      :full-content="firstBlock.fullContent"
+      :read-time="firstBlock.readTime"
+      :read-text="firstBlock.readText"
+      :read-links="firstBlock.readLinks"
+    />
+    <div v-for="block in restBlocks" :key="block.title">
       <NewsBlock
         :date-published="block.datePublished"
         :title="block.title"
@@ -11,21 +19,29 @@
         :full-content="block.fullContent"
         :read-time="block.readTime"
         :read-text="block.readText"
-        :read-link="block.readLink"
+        :read-links="block.readLinks"
       />
     </div>
-    <hr>
+    <hr />
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'PathTimeline',
+  name: "PathTimeline",
   props: {
     blocks: {
       type: Array,
-      default: () => []
-    }
-  }
-}
+      default: () => [],
+    },
+  },
+  computed: {
+    firstBlock() {
+      return this.blocks[0];
+    },
+    restBlocks () {
+      return this.blocks.slice(1);
+    },
+  },
+};
 </script>
