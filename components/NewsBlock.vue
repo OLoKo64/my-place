@@ -10,7 +10,7 @@
       <p v-for="paragraph in fullContent" :key="paragraph">
         {{ paragraph }}
       </p>
-      <a :key="link.text" :href="link.link" v-for="link in readLinks">{{link.text}}</a>
+      <a v-for="link in readLinks" :key="link.text" :href="link.link">{{ link.text }}</a>
     </div>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
@@ -63,6 +63,7 @@ export default {
     }
   },
   created () {
+    // @ts-ignore
     this.show = this.isOpen
   }
 }

@@ -1,6 +1,8 @@
 <template>
   <div class="path-timeline">
-    <h1 class="h1-custom">Timeline</h1>
+    <h1 class="h1-custom">
+      Timeline
+    </h1>
     <NewsBlock
       :is-open="true"
       :date-published="firstBlock.datePublished"
@@ -22,26 +24,30 @@
         :read-links="block.readLinks"
       />
     </div>
-    <hr />
+    <hr>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: "PathTimeline",
+  name: 'PathTimeline',
   props: {
     blocks: {
       type: Array,
-      default: () => [],
-    },
+      default: () => []
+    }
   },
   computed: {
-    firstBlock() {
-      return this.blocks[0];
+    // @ts-ignore
+    firstBlock () {
+      // @ts-ignore
+      return this.blocks[0]
     },
+    // @ts-ignore
     restBlocks () {
-      return this.blocks.slice(1);
-    },
-  },
-};
+      // @ts-ignore
+      return this.blocks.slice(1)
+    }
+  }
+}
 </script>
