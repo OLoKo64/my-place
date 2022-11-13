@@ -1,5 +1,35 @@
 [
   {
+    "date-published": "13/11/2022",
+    "title": "Publishing my first Rust crate",
+    "content": "The process of publishing my first Rust crate to crates.io",
+    "full-content": [
+      "As we know Heroku was one of the most popular free deployment platforms for web services, but on 22/11/2022 it will be no longer the case.",
+      "As I was looking for a excuse to learn a Rust API I took the chance and rebuild the API that was sending emails of this website using Actix Web, One of the fastest APIs out there and the publishing on another platform, render.com in this case.",
+      "But there was a problem, the official Sendgrid package that I was using before in Python was not available in Rust, so I had to create my own crate to send emails using Sendgrid API, as the ones available were not working or were not compatible to run inside another tokio runtime.",
+      "Creating the package was not the biggest challenge, as I am a bit familiar with the language, but I never had created or published a package before, so I had to learn how to do it.",
+      "The first steps were the basic ones, create a lib package, create a repository on GitHub. Creating the first version was super easy, the process was simple and well documented",
+      "After I published the package I felt the need to make super easy to other people to use it, so it began, the process of creating a documentation, making all the available functions intuitive, and also adding some tests to make sure that the package was working as expected and I do not make any regressions in the future.",
+      "This whole process was awesome, I learned a lot about Rust, and also about the process of publishing a package, and I am super happy that I did it, and I am looking forward to create more packages in the future."
+    ],
+    "read-time": "2 min read",
+    "read-text": "Read More...",
+    "read-links": [
+      {
+        "text": "Published Crate on Crates.io",
+        "link": "https://crates.io/crates/sendgrid_thin"
+      },
+      {
+        "text": "Actix Web",
+        "link": "https://actix.rs/"
+      },
+      {
+        "text": "Render Web Services Platform",
+        "link": "https://render.com/"
+      }
+    ]
+  },
+  {
     "date-published": "22/08/2022",
     "title": "Migrating this website to Nuxt.js",
     "content": "The main reasons of why I migrate this site from Gridsome to Nuxt.js",
@@ -11,12 +41,7 @@
     ],
     "read-time": "1 min read",
     "read-text": "Read More...",
-    "read-links": [
-      {
-        "text": "text 1",
-        "link": "https://github.com/"
-      }
-    ]
+    "read-links": []
   },
   {
     "date-published": "13/08/2022",
@@ -32,8 +57,8 @@
     "read-text": "Read More...",
     "read-links": [
       {
-        "text": "text",
-        "link": "https://github.com/OLoKo64"
+        "text": "Website Source Code",
+        "link": "https://github.com/OLoKo64/oloko64-dev"
       }
     ]
   }
