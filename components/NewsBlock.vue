@@ -10,7 +10,12 @@
       <p v-for="paragraph in fullContent" :key="paragraph">
         {{ paragraph }}
       </p>
-      <a v-for="link in readLinks" :key="link.text" :href="link.link">{{ link.text }}</a>
+      <div class="block__link">
+        <div v-for="link in readLinks" :key="link.text">
+          |
+          <a class="block__link__single" :href="link.link">{{ link.text }}</a>
+        </div>
+      </div>
     </div>
     <div class="block__time">
       <span class="block__read-time">{{ readTime }}</span>
@@ -73,6 +78,16 @@ export default {
 .news-block {
   .block__time {
     margin-bottom: 15px;
+  }
+
+  .block__link {
+    display: flex;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .block__link__single {
+    margin-right: 10px;
   }
 
   .block__title {
