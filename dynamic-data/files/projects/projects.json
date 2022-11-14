@@ -1,19 +1,44 @@
-{
-  "personalizations": [
-    {
-      "to": [{ "email": "recipient@example.com" }],"cc": [{ "email": "recipient2@example.com" }]}],
-  "from": { "email": "sendeexampexample@example.com" },
-  "subject": "Hello, World!",
-  "content": [{ "type": "text/plain", "value": "Heya!" }]
-}
-
-{
-  "personalizations": [
-    { 
-      "to": [{ "email": "recipient@example.com" }] 
-      }
-    ],
-  "from": { "email": "sendeexampexample@example.com" },
-  "subject": "Hello, World!",
-  "content": [{ "type": "text/plain", "value": "Heya!" }]
-}
+[
+  {
+    "title": "OLoKo64-dev",
+    "content": "The website where you are right now. Built using the Nuxt.js framework.",
+    "language": "Typescript",
+    "link": "https://github.com/OLoKo64/oloko64-dev"
+  },
+  {
+    "title": "TransferSh Helper Rusted",
+    "content": "Store your transfer.sh links, so you can remember them later and know when they will expire, but now written in Rust.",
+    "language": "Rust",
+    "link": "https://github.com/OLoKo64/transfer-sh-helper-rusted"
+  },
+  {
+    "title": "Sendgrid Thin",
+    "content": "A small unofficial library to send emails using Sendgrid with no build in runtime.",
+    "language": "Rust",
+    "link": "https://crates.io/crates/sendgrid_thin"
+  },
+  {
+    "title": "Rust Code Examples",
+    "content": "My code during the journey learning Rust.",
+    "language": "Rust",
+    "link": "https://github.com/OLoKo64/rust-code-examples"
+  },
+  {
+    "title": "Regrep",
+    "content": "Recreate grep in Rust, mostly for learning.",
+    "language": "Rust",
+    "link": "https://github.com/OLoKo64/regrep"
+  },
+  {
+    "title": "Turing Machine",
+    "content": "Recreation of the Turing Machine in PHP.",
+    "language": "PHP",
+    "link": "https://github.com/"
+  },
+  {
+    "title": "Steam Prices Crawler",
+    "content": "Crawler to get prices from Steam and output them to a csv file.",
+    "language": "Python",
+    "link": "https://github.com/OLoKo64/steam-game-prices"
+  }
+]
