@@ -63,7 +63,7 @@ export default {
             name: 'email',
             alt: 'email',
             height: '28px',
-            link: 'mailto:reinaldorozatoj@gmail.com'
+            link: 'mailto:reinaldorozatoj.11cg1@aleeas.com'
           }
         ]
         // The "require" is needed to tell webpack to pack the icon
