@@ -32,7 +32,7 @@ export default {
       },
       {
         name: 'My Email',
-        link: 'mailto:reinaldorozatoj@gmail.com'
+        link: 'mailto:reinaldorozatoj.11cg1@aleeas.com'
       }
     ]
 
