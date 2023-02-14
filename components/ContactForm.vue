@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-form">
+  <div class="contact-form mt-2">
     <b-alert v-if="messageWasSentSuccessfully" class="mt-1" variant="success" show>
       Message was sent successfully!
     </b-alert>
@@ -10,6 +10,13 @@
       Send me a message
     </b-btn>
     <b-form v-if="isFormVisible" class="contact__form">
+      <b-form-input
+        v-model="formData.contact"
+        class="mt-1 mb-3 input-custom-color"
+        type="text"
+        maxlength="50"
+        placeholder="Contact (email, phone, etc)"
+      />
       <b-form-input
         v-model="formData.subject"
         class="mt-1 mb-3 input-custom-color"
@@ -22,7 +29,7 @@
         class="input-custom-color"
         placeholder="Enter a message..."
         maxlength="2000"
-        rows="3"
+        rows="4"
         max-rows="6"
       />
       <div class="mt-3">
@@ -30,7 +37,7 @@
           <span v-if="!isSendLoading">Send</span>
           <b-spinner v-else small label="Spinning" />
         </b-btn>
-        <b-btn class="btn-close-message" @click="isFormVisible = !isFormVisible">
+        <b-btn class="btn-close-message ml-1" @click="isFormVisible = !isFormVisible">
           Close
         </b-btn>
       </div>
@@ -45,6 +52,7 @@ export default {
   setup () {
     const isFormVisible = ref(false)
     const formData = ref({
+      contact: '',
       subject: '',
       body: ''
     })
@@ -53,13 +61,14 @@ export default {
     const messageWasSentError = ref(false)
 
     const isSendable = computed(() => {
-      return formData.value.subject.length > 0 && formData.value.body.length > 0
+      return formData.value.subject.length > 0 && formData.value.body.length > 0 && formData.value.contact.length > 0
     })
 
     const sendEmail = async () => {
       try {
         isSendLoading.value = true
-        await sendContactEmail(formData.value.subject, formData.value.body)
+        await sendContactEmail(formData.value.contact, formData.value.subject, formData.value.body)
+        formData.value.contact = ''
         formData.value.subject = ''
         formData.value.body = ''
         isFormVisible.value = false
