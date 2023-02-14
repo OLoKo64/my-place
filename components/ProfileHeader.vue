@@ -14,14 +14,16 @@
           My name is Reinaldo Rozato Junior, graduated in Computer Science at
           UNIP.
         </p>
-        <p>I'm 24 years old living in Araraquara-SP, Brazil.</p>
         <p>
-          Some of my favorite languages are Python, JavaScript and Rust, which
-          I'm currently learning and loving using it.
+          With over 2 years of experience in programming, I have developed a passion for software engineering.
+          I am proficient in several programming languages including Javascript, Typescript, Rust, and Python.
         </p>
         <p>
-          I have 2 years of work experience, mostly using Vue in the front end
-          and Python in the backend.
+          My skills in both frontend and backend development have allowed me to work on various projects, providing me with a wide range of experience.
+        </p>
+        <p>
+          I am currently based in Araraquara, Brazil, and I am always excited to meet new people and work on challenging projects.
+          If you have any question or wish to collaborate on a project, please do not hesitate to get in touch with me.
         </p>
       </div>
     </div>
