@@ -24,16 +24,16 @@
     "link": "https://crates.io/crates/sendgrid_thin"
   },
   {
+    "title": "Comprexor",
+    "content": "A simple Rust lib to compress and extract files and directories.",
+    "language": "Rust",
+    "link": "https://github.com/OLoKo64/comprexor"
+  },
+  {
     "title": "Rust Code Examples",
     "content": "My code during the journey learning Rust.",
     "language": "Rust",
     "link": "https://github.com/OLoKo64/rust-code-examples"
-  },
-  {
-    "title": "Regrep",
-    "content": "Recreate grep in Rust, mostly for learning.",
-    "language": "Rust",
-    "link": "https://github.com/OLoKo64/regrep"
   },
   {
     "title": "Turing Machine",
