@@ -30,6 +30,12 @@
     "link": "https://github.com/OLoKo64/comprexor"
   },
   {
+    "title": "Binconf",
+    "content": "Save and load configurations effortlessly using a binary configuration file.",
+    "language": "Rust",
+    "link": "https://github.com/OLoKo64/binconf"
+  },
+  {
     "title": "Rust Code Examples",
     "content": "My code during the journey learning Rust.",
     "language": "Rust",
@@ -39,12 +45,6 @@
     "title": "Turing Machine",
     "content": "Recreation of the Turing Machine in PHP.",
     "language": "PHP",
-    "link": "https://github.com/"
-  },
-  {
-    "title": "Steam Prices Crawler",
-    "content": "Crawler to get prices from Steam and output them to a csv file.",
-    "language": "Python",
-    "link": "https://github.com/OLoKo64/steam-game-prices"
+    "link": "https://github.com/ArturVRSampaio/TuringMachine"
   }
 ]
