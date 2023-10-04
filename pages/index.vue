@@ -28,7 +28,7 @@ export default {
       },
       {
         name: 'My GitHub',
-        link: 'https://github.com/OLoKo64'
+        link: 'https://github.com/oloko64'
       },
       {
         name: 'My Email',

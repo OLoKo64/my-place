@@ -25,7 +25,7 @@ interface EmailResponse {
 async function fetchTimelineData (): Promise<TimelineData[]> {
   try {
     const { data } = await axios.get(
-      'https://raw.githubusercontent.com/OLoKo64/oloko64-dev/main/dynamic-data/files/timeline/timeline.json'
+      'https://raw.githubusercontent.com/oloko64/oloko64-dev/main/dynamic-data/files/timeline/timeline.json'
     )
     if (!data) {
       return []
@@ -49,7 +49,7 @@ async function fetchTimelineData (): Promise<TimelineData[]> {
 async function fetchProjectsData (): Promise<ProjectsData[]> {
   try {
     const { data } = await axios.get(
-      'https://raw.githubusercontent.com/OLoKo64/oloko64-dev/main/dynamic-data/files/projects/projects.json'
+      'https://raw.githubusercontent.com/oloko64/oloko64-dev/main/dynamic-data/files/projects/projects.json'
     )
     if (!data) {
       return []

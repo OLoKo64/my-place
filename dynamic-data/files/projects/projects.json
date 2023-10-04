@@ -1,21 +1,21 @@
 [
   {
-    "title": "OLoKo64-dev",
+    "title": "oloko64-dev",
     "content": "The website where you are right now. Built using the Nuxt.js framework.",
     "language": "Typescript",
-    "link": "https://github.com/OLoKo64/oloko64-dev"
+    "link": "https://github.com/oloko64/oloko64-dev"
   },
   {
     "title": "Upscale-rs",
     "content": "A Tauri based GUI app that upscale images using Real-ESRGAN model.",
     "language": "Rust, Typescript",
-    "link": "https://github.com/OLoKo64/upscale-rs"
+    "link": "https://github.com/oloko64/upscale-rs"
   },
   {
     "title": "TransferSh Helper Rusted",
     "content": "Store your transfer.sh links, so you can remember them later and know when they will expire, but now written in Rust.",
     "language": "Rust",
-    "link": "https://github.com/OLoKo64/transfer-sh-helper-rusted"
+    "link": "https://github.com/oloko64/transfer-sh-helper-rusted"
   },
   {
     "title": "Sendgrid Thin",
@@ -27,19 +27,19 @@
     "title": "Comprexor",
     "content": "A simple Rust lib to compress and extract files and directories.",
     "language": "Rust",
-    "link": "https://github.com/OLoKo64/comprexor"
+    "link": "https://github.com/oloko64/comprexor"
   },
   {
     "title": "Binconf",
     "content": "Save and load configurations effortlessly using a binary configuration file.",
     "language": "Rust",
-    "link": "https://github.com/OLoKo64/binconf"
+    "link": "https://github.com/oloko64/binconf"
   },
   {
     "title": "Rust Code Examples",
     "content": "My code during the journey learning Rust.",
     "language": "Rust",
-    "link": "https://github.com/OLoKo64/rust-code-examples"
+    "link": "https://github.com/oloko64/rust-code-examples"
   },
   {
     "title": "Turing Machine",

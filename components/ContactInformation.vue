@@ -39,7 +39,7 @@ export default {
             name: 'github',
             alt: 'github',
             height: '28px',
-            link: 'https://github.com/OLoKo64'
+            link: 'https://github.com/oloko64'
           },
           {
             name: 'telegram',
